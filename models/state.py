@@ -1,14 +1,22 @@
-#!/usr/bin/python3
+h#!/usr/bin/env python3
 """
-State class, a subclass of BaseModel
+State module
+this module have and manage State Entity
 """
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
     """
-    A subclass of BaseModel class
-    Public class attribute:
-        name: (str)
+    Public class attributes:
+        name: string - empty string
     """
-    name = ""
+    name = ''
+
+    def __init__(self, *args, **kwargs):
+        if len(kwargs) == 0:
+            super().__init__()
+
+        # if kwargs have values
+        if len(kwargs) > 0:
+            super().__init__(**kwargs)
