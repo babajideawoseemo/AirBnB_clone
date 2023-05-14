@@ -1,4 +1,3 @@
-o
 #!/usr/bin/python3
 """
     This is a module test from BaseModel class and your methods.
